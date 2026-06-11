@@ -3,6 +3,6 @@
 
 typedef struct contact_s {
     char *name;
-    int *phone_numbers;
+    char *phone_numbers;
 } contact_t;
 #endif /* CONTACTS_H */
