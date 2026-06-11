@@ -23,6 +23,12 @@ void Delstruct(contact_t *contact){
     free(contact);
 }
 
+void Delcontact(contact_t **contact){
+    int id;
+    printf("Quel est l'id du contact à supprimer ? ");
+    scanf("%d", &id);
+    Deltruct(contact[id]);
+}
 
 void freefct(contact_t **contacts) {
     for (int i = 0; i < 100; i++) {
