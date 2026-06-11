@@ -7,5 +7,6 @@ typedef struct contact_s {
 } contact_t;
 
 contact_t *Addcontact();
-void delcontact(contact_t *contact);
+void Delstruct(contact_t *contact);
+void freefct(contact_t **contacts);
 #endif /* CONTACTS_H */

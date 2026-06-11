@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include "contacts.h"
 
 contact_t *Addcontact(){
@@ -16,12 +17,21 @@ contact_t *Addcontact(){
     return contact;
 }
 
-void Deltruct(contact_t *contact){
+void Delstruct(contact_t *contact){
     free(contact->name);
     free(contact->phone_numbers);
     free(contact);
 }
 
+
+void freefct(contact_t **contacts) {
+    for (int i = 0; i < 100; i++) {
+        if (contacts[i] != NULL) {
+            Delstruct(contacts[i]);
+        }
+    }
+    free(contacts);
+}
 
 int main() {
     contact_t **contacts = malloc(sizeof(contact_t *) * 100);
