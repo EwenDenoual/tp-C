@@ -1,6 +1,8 @@
 #include <stdio.h>
+#include "contacts.h"
 
 int main() {
+    contact_t **contacts = malloc(sizeof(contact_t *) * 100);
     int choice = 1;
 
     while (1) {
@@ -13,6 +15,7 @@ int main() {
         scanf("%d", &choice);
         switch (choice) {
             case 0:
+                freefct(contacts);
                 return 0;
             case 1:
                 printf("Listing contacts...\n");
