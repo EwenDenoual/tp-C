@@ -7,4 +7,5 @@ typedef struct contact_s {
 } contact_t;
 
 contact_t *Addcontact();
+void delcontact(contact_t *contact);
 #endif /* CONTACTS_H */

@@ -16,6 +16,13 @@ contact_t *Addcontact(){
     return contact;
 }
 
+void Deltruct(contact_t *contact){
+    free(contact->name);
+    free(contact->phone_numbers);
+    free(contact);
+}
+
+
 int main() {
     contact_t **contacts = malloc(sizeof(contact_t *) * 100);
     int choice = 1;
