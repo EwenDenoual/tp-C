@@ -1,6 +1,21 @@
 #include <stdio.h>
 #include "contacts.h"
 
+contact_t *Addcontact(){
+    char *name;
+    char *phone_numbers;
+    name = malloc(sizeof(char) * 100);
+    phone_numbers = malloc(sizeof(char) * 100);
+    contact_t *contact = malloc(sizeof(contact_t));
+    printf("Quel est le nom du contact ? ");
+    scanf("%s", name);
+    printf("Quels est le numéro de téléphone du contact ? ");
+    scanf("%s", phone_numbers);
+    contact->name = name;
+    contact->phone_numbers = phone_numbers;
+    return contact;
+}
+
 int main() {
     contact_t **contacts = malloc(sizeof(contact_t *) * 100);
     int choice = 1;
